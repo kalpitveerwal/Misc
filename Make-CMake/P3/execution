@@ -1,0 +1,27 @@
+pathnames.h : Makefile
+version.h : execute_cmd.c 
+buildversion.o : version.h
+bashversion : version.h buildversion.o
+.build : execute_cmd.c version.h bashversion
+lib/intl/libintl.a : .build
+execute_cmd.o : execute_cmd.c
+variables.o : version.h
+version.o : version.h
+builtins/libbuiltins.a : version.h
+builtins.c : mkbuiltins
+builtext.h : mkbuiltins
+lib/glob/libglob.a : .build
+/home/kiran/Downloads/bash-4.4/pathnames.h : /home/kiran/Downloads/bash-4.4/Makefile Makefile
+pathnames.h : Makefile
+lib/sh/libsh.a : .build
+/home/kiran/Downloads/bash-4.4/pathnames.h : /home/kiran/Downloads/bash-4.4/Makefile Makefile
+pathnames.h : Makefile
+lib/raedline/libreadline.a : .build
+lib/readline/libhistory.a : .build
+lib/termcap/libtermcap.a : .build
+lib/tilde/libtilde.a : .build
+lib/malloc/libmalloc.a : .build
+malloc : malloc.o trace.o stats.o table.o watch.o
+bash : .build execute_cmd.o variables.o version.o lib/malloc/libmalloc.a
+bashbug : bashversion
+.made : bash bashbug

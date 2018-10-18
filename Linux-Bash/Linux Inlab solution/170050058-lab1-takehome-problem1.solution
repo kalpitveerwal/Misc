@@ -1,0 +1,7 @@
+mkdir ~/iitb
+mv ~/Data/students/*iitb* ./iitb
+cd iitb
+echo "please apply for phd before Jan 2019" | tee -a *201[6-9]*
+cal 1 2019 | tee -a *201[6-9]*
+
+

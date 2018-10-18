@@ -1,0 +1,7 @@
+cd ~/iit/
+ls
+ls -t
+ls -rS
+ls -r
+ls -rt
+ls -S

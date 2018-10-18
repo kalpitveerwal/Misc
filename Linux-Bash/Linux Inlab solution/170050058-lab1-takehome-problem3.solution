@@ -1,0 +1,6 @@
+cd ~/iit/
+touch names.txt
+cat ~/Data/find.txt > names.txt
+sort names.txt
+cat *
+

@@ -1,0 +1,6 @@
+cd ~/Data/students/
+echo "0 17 * * 3 find . '*.txt' -mmin +30 -delete" | tee jobfile.cron
+find . '*.txt' -mmin +30 -delete
+crontab jobfile.cron
+crontab -r
+

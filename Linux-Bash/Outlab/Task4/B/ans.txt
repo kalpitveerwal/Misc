@@ -1,0 +1,2 @@
+6 
+reason being that $?(exit code) can store values till 255 (8 bits), while 6 factorial is more than 255.
